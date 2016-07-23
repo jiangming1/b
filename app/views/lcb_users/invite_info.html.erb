@@ -1,0 +1,221 @@
+<meta content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+<meta charset="utf-8">
+<title>邀请返现</title>
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+<link type="text/css" rel="stylesheet" href="invite_info.css">
+<script>
+  $(function() {  
+    var shareurl = 'http://8.laicunba.com/h5/regist_new.jsp?invite_code=272966&mobile=132****8404';
+        wx.config({
+          debug : false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+          appId : 'wxdedbeccf953c08dd', // 必填，公众号的唯一标识
+          timestamp :'1464799072', // 必填，生成签名的时间戳
+          nonceStr : '2786093a-003e-418c-80a4-af35314ea968', // 必填，生成签名的随机串
+          signature :'ad446c2f766eb99f7f1d034fa627ec3dd040176c',// 必填，签名，见附录1
+           jsApiList: ['onMenuShareQZone',
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage',
+                'onMenuShareQQ',
+                'onMenuShareWeibo',
+                'hideMenuItems',
+                'showMenuItems',
+                'hideAllNonBaseMenuItem',
+                'showAllNonBaseMenuItem',
+                'translateVoice',
+                'startRecord',
+                'stopRecord',
+                'onRecordEnd',
+                'playVoice',
+                'pauseVoice',
+                'stopVoice',
+                'uploadVoice',
+                'downloadVoice',
+                'chooseImage',
+                'previewImage',
+                'uploadImage',
+                'downloadImage',
+                'getNetworkType',
+                'openLocation',
+                'getLocation',
+                'hideOptionMenu',
+                'showOptionMenu',
+                'closeWindow',
+                'scanQRCode',
+                'chooseWXPay',
+                'openProductSpecificView',
+                'addCard',
+                'chooseCard',
+                'openCard']
+        // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+
+
+      wx.ready(function() {
+          // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，
+          // config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，
+          // 则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，
+          // 则可以直接调用，不需要放在ready函数中。
+
+          wx.onMenuShareAppMessage({
+            title : '要理财,来存吧!', // 分享标题
+            desc : '来存吧票据理财,注册即送18888元理财金,新手宝7天年化收益率达20%!100万小伙伴的选择,让你的每笔财富增值!', // 分享描述
+            link :shareurl, // 分享链接
+            imgUrl : 'http://8.laicunba.com/h5/img/sharelogo.png', // 分享图标
+            type : '', // 分享类型,music、video或link，不填默认为link
+            dataUrl : '', // 如果type是music或video，则要提供数据链接，默认为空
+            success : function() {
+              // 用户确认分享后执行的回调函数
+            },
+            cancel : function() {
+              // 用户取消分享后执行的回调函数
+            }
+          });
+
+          wx.onMenuShareTimeline({
+            title : '要理财,来存吧!来存吧票据理财,注册即送18888元理财金,新手宝7天年化收益率达20%!100万小伙伴的选择,让你的每笔财富增值!', // 分享标题
+            link : shareurl, // 分享链接
+            imgUrl : 'http://8.laicunba.com/h5/img/sharelogo.png', // 分享图标
+            success : function() {
+              // 用户确认分享后执行的回调函数
+              
+            },
+            cancel : function() {
+              // 用户取消分享后执行的回调函数
+              
+            }
+          });
+          
+          wx.onMenuShareQQ({
+              title: '要理财,来存吧!', // 分享标题
+              desc: '来存吧票据理财,注册即送18888元理财金,新手宝7天年化收益率达20%!100万小伙伴的选择,让你的每笔财富增值!', // 分享描述
+              link: shareurl, // 分享链接
+              imgUrl: 'http://8.laicunba.com/h5/img/sharelogo.png', // 分享图标
+              success : function() {
+              // 用户确认分享后执行的回调函数
+              
+            },
+            cancel : function() {
+              // 用户取消分享后执行的回调函数
+              
+            }
+          });
+          
+          wx.onMenuShareQZone({
+              title: '要理财,来存吧!', // 分享标题
+              desc: '来存吧票据理财,注册即送18888元理财金,新手宝7天年化收益率达20%!100万小伙伴的选择,让你的每笔财富增值!', // 分享描述
+              link: shareurl, // 分享链接
+              imgUrl: 'http://8.laicunba.com/h5/img/sharelogo.png', // 分享图标
+              success : function() {
+              // 用户确认分享后执行的回调函数
+              
+            },
+            cancel : function() {
+              // 用户取消分享后执行的回调函数
+              
+            }
+          });
+
+      }); 
+  }); 
+</script>
+</head>
+<body>
+  <div class="invitebody">
+    <div class="invitecodecontent">
+      <div class="invitetext">我的邀请码</div>
+      <div class="invitenum">
+        <meta name="format-detection" content="telephone=no">272966</div>
+      <div class="inviteQrCode">
+        <img src="http://testpic.laicunba.com/invite/3488a482-a4fc-402a-a3bf-d916617e2879.png">
+      </div>
+      <div class="scanningremain">微信扫一扫</div>
+      
+      <div class="inviteaction" id="inviteaction">立即邀请</div>
+      
+      <div class="remainimg">
+        <img src="img/remain.png">
+      </div>
+    </div>
+    <div style="background: #342f4a;width: 100%; padding-bottom: 1rem;position: relative;">
+        <div class="btninviterule">
+                      活动规则
+        </div>
+      <div class="rewardinfo">
+        <img src="img/rewardinfo01.png">
+      </div>
+      <div class="inviteinfo">
+        <div class="inviteinfotop">
+          <div class="inviteinfotopleft">
+            共邀请<span class="inviteinfofontcolor">0</span>名好友
+          </div>
+          <div class="inviteinfotopright">
+            目前收益<span class="inviteinfofontcolor">0</span>元
+          </div>
+        </div>
+        <hr class="inviteinfohr">
+        <div class="inviteinfocontent">
+          <div class="inviteinfocontenttop">
+            <div class="inviteinfofriendsnum">好友号码</div>
+            <div class="inviteinfostatus">邀请状态</div>
+            <div class="inviteinforewards">现金券奖励</div>
+          </div>
+          <div class="inviteinfocontentbody">
+            
+          </div>
+        </div>
+      </div>
+      </div>
+<!--    <div class="activeruleinfo"> -->
+<!--      <div class="activetitle">活动规则</div> -->
+<!--      <div class="activecontent"> -->
+<!--        1. 邀请好友投资，您最高可获得10万理财金;<br> 2. -->
+<!--        好友购买1000元以上5000元以下，理财期限1个月及以上的【银票宝】产品，您将获得20000元理财金;<br> 3. -->
+<!--        好友购买5000元及以上，理财期限1个月及以上的【银票宝】产品，您将获得30000元理财金;<br> 4. -->
+<!--        好友购买10000元及以上，理财期限1个月及以上的【银票宝】产品，您将获得50000元理财金;<br> 5. -->
+<!--        获得的理财金将为您自动购买指定【银票宝】产品，在【我的账户】可以查询;<br> 6. -->
+<!--        到期理财金本金收回，利息将自动转入您的【随存宝】账户;<br> 7. 好友首次注册，好友可获得18888元理财金;<br> -->
+<!--        8.好友首次投资，可享受年化收益率20%的【新手宝】，限期7天，限额10000元。 -->
+<!--      </div> -->
+<!--    </div> -->
+  </div>
+  <div class="mask"></div>
+  <div class="maskimg">
+    <img src="img/maskimg.png">
+  </div>
+  <!-- 活动规则   -->
+  <div class="invite_rule_con">
+          <div class="rule_title">活动规则</div>
+          <table class="rule_con">
+               <tbody><tr>
+                   <td class="td-1">1.</td>
+                   <td>好友注册成功，您将获得10元现金券1张（银票宝30天以上可使用）;</td>
+               </tr>
+               <tr>
+               <td class="td-1">2.</td>
+                   <td>好友投资成功，您将获得20元现金券1张（银票宝5000元30天以上可使用）;</td>
+               </tr>
+               <tr>
+                   <td class="td-1">3.</td>
+                   <td>获得的现金券可在 我的账户-我的红包 中查看;</td>
+               </tr>
+               <tr>
+                   <td class="td-1">4.</td>
+                   <td>您的好友将获得18888理财金收益+20%新手宝投标资格。</td>
+               </tr>
+            </tbody></table>
+            <div class="btn_sure">确定</div>
+     </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+  <script type="text/javascript">
+    $(".inviteaction").click(function() {
+      $(".mask,.maskimg").fadeIn();
+    })
+    $(".mask,.btn_sure").click(function() {
+      $(".mask,.maskimg,.invite_rule_con").fadeOut();
+    })
+    $(".btninviterule").click(function(){
+      $(".mask,.invite_rule_con").fadeIn();
+    })
+  </script>
+
+</body></html>

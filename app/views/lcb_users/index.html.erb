@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Login pwd</th>
+      <th>Login name</th>
+      <th>Mobile</th>
+      <th>True name</th>
+      <th>Id</th>
+      <th>Owner</th>
+      <th>Create uid</th>
+      <th>Write uid</th>
+      <th>Pay pwd</th>
+      <th>Pid</th>
+      <th>Invite qr code</th>
+      <th>Invite code</th>
+      <th>Invite from</th>
+      <th>Channel</th>
+      <th>Stutus</th>
+      <th>Remain profit</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_users.each do |lcb_user| %>
+      <tr>
+        <td><%= lcb_user.login_pwd %></td>
+        <td><%= lcb_user.login_name %></td>
+        <td><%= lcb_user.mobile %></td>
+        <td><%= lcb_user.true_name %></td>
+        <td><%= lcb_user.id %></td>
+        <td><%= lcb_user.owner_id %></td>
+        <td><%= lcb_user.create_uid %></td>
+        <td><%= lcb_user.write_uid %></td>
+        <td><%= lcb_user.pay_pwd %></td>
+        <td><%= lcb_user.pid %></td>
+        <td><%= lcb_user.invite_qr_code %></td>
+        <td><%= lcb_user.invite_code %></td>
+        <td><%= lcb_user.invite_from %></td>
+        <td><%= lcb_user.channel %></td>
+        <td><%= lcb_user.stutus %></td>
+        <td><%= lcb_user.remain_profit %></td>
+        <td><%= link_to 'Show', lcb_user %></td>
+        <td><%= link_to 'Edit', edit_lcb_user_path(lcb_user) %></td>
+        <td><%= link_to 'Destroy', lcb_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb User', new_lcb_user_path %>

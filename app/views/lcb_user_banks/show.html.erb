@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bank card no:</strong>
+  <%= @lcb_user_bank.bank_card_no %>
+</p>
+
+<p>
+  <strong>Bank code:</strong>
+  <%= @lcb_user_bank.bank_code %>
+</p>
+
+<p>
+  <strong>Bank name:</strong>
+  <%= @lcb_user_bank.bank_name %>
+</p>
+
+<p>
+  <strong>Holder:</strong>
+  <%= @lcb_user_bank.holder %>
+</p>
+
+<p>
+  <strong>Pid:</strong>
+  <%= @lcb_user_bank.pid %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @lcb_user_bank.mobile %>
+</p>
+
+<p>
+  <strong>Lcb user:</strong>
+  <%= @lcb_user_bank.lcb_user_id %>
+</p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @lcb_user_bank.id %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @lcb_user_bank.owner_id %>
+</p>
+
+<p>
+  <strong>Create uid:</strong>
+  <%= @lcb_user_bank.create_uid %>
+</p>
+
+<p>
+  <strong>Write uid:</strong>
+  <%= @lcb_user_bank.write_uid %>
+</p>
+
+<%= link_to 'Edit', edit_lcb_user_bank_path(@lcb_user_bank) %> |
+<%= link_to 'Back', lcb_user_banks_path %>

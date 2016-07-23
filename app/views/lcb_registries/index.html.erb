@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb Registries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Visible</th>
+      <th>Summary</th>
+      <th>Val</th>
+      <th>Regex</th>
+      <th>Owner</th>
+      <th>Create uid</th>
+      <th>Write uid</th>
+      <th>Id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_registries.each do |lcb_registry| %>
+      <tr>
+        <td><%= lcb_registry.visible %></td>
+        <td><%= lcb_registry.summary %></td>
+        <td><%= lcb_registry.val %></td>
+        <td><%= lcb_registry.regex %></td>
+        <td><%= lcb_registry.owner_id %></td>
+        <td><%= lcb_registry.create_uid %></td>
+        <td><%= lcb_registry.write_uid %></td>
+        <td><%= lcb_registry.id %></td>
+        <td><%= link_to 'Show', lcb_registry %></td>
+        <td><%= link_to 'Edit', edit_lcb_registry_path(lcb_registry) %></td>
+        <td><%= link_to 'Destroy', lcb_registry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb Registry', new_lcb_registry_path %>

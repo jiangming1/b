@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  content: MyString
+  user_id: MyString
+  summary: MyString
+  begin_time: 2016-05-26 11:36:55
+  end_time: 2016-05-26 11:36:55
+  tips: MyString
+  used: false
+  used_time: 2016-05-26 11:36:55
+  id: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  amount: MyString
+
+two:
+  name: MyString
+  type: 
+  content: MyString
+  user_id: MyString
+  summary: MyString
+  begin_time: 2016-05-26 11:36:55
+  end_time: 2016-05-26 11:36:55
+  tips: MyString
+  used: false
+  used_time: 2016-05-26 11:36:55
+  id: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  amount: MyString

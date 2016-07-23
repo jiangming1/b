@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Apidocs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apidocs.each do |apidoc| %>
+      <tr>
+        <td><%= apidoc.name %></td>
+        <td><%= apidoc.content %></td>
+        <td><%= link_to 'Show', apidoc %></td>
+        <td><%= link_to 'Edit', edit_apidoc_path(apidoc) %></td>
+        <td><%= link_to 'Destroy', apidoc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apidoc', new_apidoc_path %>

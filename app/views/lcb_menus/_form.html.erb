@@ -1,0 +1,77 @@
+<%= form_for(lcb_menu) do |f| %>
+  <% if lcb_menu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lcb_menu.errors.count, "error") %> prohibited this lcb_menu from being saved:</h2>
+
+      <ul>
+      <% lcb_menu.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :separator %>
+    <%= f.check_box :separator %>
+  </div>
+
+  <div class="field">
+    <%= f.label :icon %>
+    <%= f.text_field :icon %>
+  </div>
+
+  <div class="field">
+    <%= f.label :target %>
+    <%= f.text_field :target %>
+  </div>
+
+  <div class="field">
+    <%= f.label :parent_menu_id %>
+    <%= f.text_field :parent_menu_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sort_num %>
+    <%= f.number_field :sort_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quick_btn %>
+    <%= f.check_box :quick_btn %>
+  </div>
+
+  <div class="field">
+    <%= f.label :menu_name %>
+    <%= f.text_field :menu_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :id %>
+    <%= f.text_field :id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :owner_id %>
+    <%= f.text_field :owner_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :create_uid %>
+    <%= f.text_field :create_uid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :write_uid %>
+    <%= f.text_field :write_uid %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

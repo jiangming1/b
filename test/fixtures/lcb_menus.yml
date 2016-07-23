@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  separator: false
+  icon: MyString
+  target: MyString
+  parent_menu_id: MyString
+  sort_num: 1
+  quick_btn: false
+  menu_name: MyString
+  url: MyString
+  id: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+
+two:
+  separator: false
+  icon: MyString
+  target: MyString
+  parent_menu_id: MyString
+  sort_num: 1
+  quick_btn: false
+  menu_name: MyString
+  url: MyString
+  id: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString

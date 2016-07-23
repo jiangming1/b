@@ -1,0 +1,1 @@
+json.extract! @lcb_cash_coupon, :id, :name, :user_id, :amount, :summary, :begin_time, :end_time, :conditions, :used_amount, :financing_target_bid_id, :def_id, :id, :owner_id, :create_uid, :write_uid, :created_at, :updated_at

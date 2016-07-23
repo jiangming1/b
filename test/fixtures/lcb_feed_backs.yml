@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: MyString
+  user_id: MyString
+  content: MyText
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  id: MyString
+
+two:
+  status: MyString
+  user_id: MyString
+  content: MyText
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  id: MyString

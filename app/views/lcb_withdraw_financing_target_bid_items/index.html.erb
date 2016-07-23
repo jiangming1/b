@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb Withdraw Financing Target Bid Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Withdraw profit</th>
+      <th>Withdraw principal</th>
+      <th>Withdraw</th>
+      <th>Financing target bid</th>
+      <th>Id</th>
+      <th>Owner</th>
+      <th>Create uid</th>
+      <th>Write uid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_withdraw_financing_target_bid_items.each do |lcb_withdraw_financing_target_bid_item| %>
+      <tr>
+        <td><%= lcb_withdraw_financing_target_bid_item.status %></td>
+        <td><%= lcb_withdraw_financing_target_bid_item.withdraw_profit %></td>
+        <td><%= lcb_withdraw_financing_target_bid_item.withdraw_principal %></td>
+        <td><%= lcb_withdraw_financing_target_bid_item.withdraw_id %></td>
+        <td><%= lcb_withdraw_financing_target_bid_item.financing_target_bid_id %></td>
+        <td><%= lcb_withdraw_financing_target_bid_item.id %></td>
+        <td><%= lcb_withdraw_financing_target_bid_item.owner_id %></td>
+        <td><%= lcb_withdraw_financing_target_bid_item.create_uid %></td>
+        <td><%= lcb_withdraw_financing_target_bid_item.write_uid %></td>
+        <td><%= link_to 'Show', lcb_withdraw_financing_target_bid_item %></td>
+        <td><%= link_to 'Edit', edit_lcb_withdraw_financing_target_bid_item_path(lcb_withdraw_financing_target_bid_item) %></td>
+        <td><%= link_to 'Destroy', lcb_withdraw_financing_target_bid_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb Withdraw Financing Target Bid Item', new_lcb_withdraw_financing_target_bid_item_path %>

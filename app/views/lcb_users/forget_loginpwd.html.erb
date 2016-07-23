@@ -1,0 +1,64 @@
+<html lang="zh-CN"><head>
+<meta content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+<meta charset="utf-8">
+<title>随存宝</title>
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<style type="text/css">
+.tab1 {
+  width: 100%;
+}
+
+body {
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.input1 {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 0px !important;
+}
+
+#btnGetVerfityCode {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 26px;
+}
+
+.errorInfo {
+  color: red;
+  float: left;
+  display: none;
+}
+</style>
+</head>
+<body>
+  <table class="tab1">
+    <tbody><tr>
+      <td style="width: 50%;"><img src="/img/logo_m.png" style="width: 100%;"></td>
+      <td valign="bottom" style="text-align: right; padding-right: 10px;">已有账号，立即<a href="/lcb_users/login">登录</a></td>
+    </tr>
+  </tbody></table>
+  <div style="height: 30px;"></div>
+  <input type="text" pattern="[0-9]*" class="input1 form-control" placeholder="请输入手机号码" id="mobileInput">
+  <div class="input-group" style="margin-top: 10px; height: 40px;">
+    <input type="text" pattern="[0-9]*" class="form-control" id="verifyCodeInput" placeholder="短信验证码" style="height: 40px; border-radius: 0px">
+    <div class="input-group-addon" style="border-radius: 0px">
+      <a id="btnGetVerfityCode"> 获取短信验证码 </a>
+    </div>
+  </div>
+  <input class="input1 form-control" id="newPwdInput" placeholder="新密码(6-16位字母或数字)" type="password">
+  <input class="input1 form-control" id="newPwd2Input" placeholder="确认新密码(6-16位字母或数字)" type="password">
+  <div class="errorInfo"></div>
+  <div style="text-align: center; margin-top: 35px;">
+    <button id="btnSubmit" class="btn btn-warning" style="background-color: #f37b1d; width: 100%; border: 1px solid #f37b1d; height: 40px;">提交</button>
+  </div>
+  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="../static/md5.js"></script>
+  <script src="forget_loginpwd.js"></script>
+
+
+</body></html>

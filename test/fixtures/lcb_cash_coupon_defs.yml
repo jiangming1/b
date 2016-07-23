@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  amount: 9.99
+  summary: MyString
+  valid_day: 1
+  used_quantity: 1
+  total_quantity: 1
+  begin_time: MyString
+  end_time: MyString
+  conditions: MyString
+  id: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+
+two:
+  name: MyString
+  amount: 9.99
+  summary: MyString
+  valid_day: 1
+  used_quantity: 1
+  total_quantity: 1
+  begin_time: MyString
+  end_time: MyString
+  conditions: MyString
+  id: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString

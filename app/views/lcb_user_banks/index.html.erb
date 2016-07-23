@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb User Banks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bank card no</th>
+      <th>Bank code</th>
+      <th>Bank name</th>
+      <th>Holder</th>
+      <th>Pid</th>
+      <th>Mobile</th>
+      <th>Lcb user</th>
+      <th>Id</th>
+      <th>Owner</th>
+      <th>Create uid</th>
+      <th>Write uid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_user_banks.each do |lcb_user_bank| %>
+      <tr>
+        <td><%= lcb_user_bank.bank_card_no %></td>
+        <td><%= lcb_user_bank.bank_code %></td>
+        <td><%= lcb_user_bank.bank_name %></td>
+        <td><%= lcb_user_bank.holder %></td>
+        <td><%= lcb_user_bank.pid %></td>
+        <td><%= lcb_user_bank.mobile %></td>
+        <td><%= lcb_user_bank.lcb_user_id %></td>
+        <td><%= lcb_user_bank.id %></td>
+        <td><%= lcb_user_bank.owner_id %></td>
+        <td><%= lcb_user_bank.create_uid %></td>
+        <td><%= lcb_user_bank.write_uid %></td>
+        <td><%= link_to 'Show', lcb_user_bank %></td>
+        <td><%= link_to 'Edit', edit_lcb_user_bank_path(lcb_user_bank) %></td>
+        <td><%= link_to 'Destroy', lcb_user_bank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb User Bank', new_lcb_user_bank_path %>

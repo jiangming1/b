@@ -1,0 +1,1 @@
+json.extract! @lcb_account_sheet, :id, :sign, :status, :row_num, :balance, :opt_user_id, :dr, :certificate_id, :cr, :ext, :account_id, :rid, :remark, :checker_uid, :check_remark, :check_date, :id, :owner_id, :create_uid, :write_uid, :created_at, :updated_at

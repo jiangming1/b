@@ -1,0 +1,62 @@
+<%= form_for(lcb_user_reward) do |f| %>
+  <% if lcb_user_reward.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lcb_user_reward.errors.count, "error") %> prohibited this lcb_user_reward from being saved:</h2>
+
+      <ul>
+      <% lcb_user_reward.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lcb_user_id %>
+    <%= f.text_field :lcb_user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :give_out %>
+    <%= f.check_box :give_out %>
+  </div>
+
+  <div class="field">
+    <%= f.label :activity_num %>
+    <%= f.text_field :activity_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :reward_num %>
+    <%= f.text_field :reward_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :owner_id %>
+    <%= f.text_field :owner_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :create_uid %>
+    <%= f.text_field :create_uid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :write_uid %>
+    <%= f.text_field :write_uid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :id %>
+    <%= f.text_field :id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :reward_desc %>
+    <%= f.text_field :reward_desc %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

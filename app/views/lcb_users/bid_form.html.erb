@@ -1,0 +1,264 @@
+<html lang="zh-CN"><head>
+<meta content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+<meta charset="utf-8">
+<title>购买</title>
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link type="text/css" rel="stylesheet" href="css/lcb_wx_common.css?201604141">
+<style type="text/css">
+.table1 {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.table1 td {
+  padding: 10px;
+}
+
+.table1 .inputLine {
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+}
+
+.table1 .inputLine input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid white;
+}
+
+#submitLayout {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dayTip, .singleTip, .monthTip {
+  color: red;
+}
+
+.bankInfo {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+#runingLayout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  color: white;
+  text-align: center;
+  line-height: 300px;
+  display: none;
+}
+
+#btnSubmit {
+  
+}
+
+.btn-warning {
+  height: 40px;
+  padding: 0px;
+}
+#touchConfirmPadDiv{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  color: white;
+  text-align: center;
+  line-height: 300px;
+  display: none;
+}
+#touchArea{
+  border-radius:6px;
+  width: 100%;height: 200px; margin: 0px auto; background-color: white;
+  padding: 10px;
+  
+}
+#btnTouchPay{
+  width: 100px;
+  vertical-align:top;
+}
+ 
+#touchProgress{
+  width: 0%;
+  height: 100%;
+  border-radius:3px;
+  background-image:linear-gradient(to right, #f3f3f3 0px, green 100%);
+  background-color: green;
+}
+
+.close-btn {
+  display: inline-block;
+  padding-right: 5px;
+  font-size: 25px;
+  font-family: '微软雅黑';
+  top: -5px;
+  right: -5px;
+  position: absolute;
+  color: #333!important;
+}
+a {
+  text-decoration: none!important;
+}
+</style>
+</head>
+<body style="padding: 0px; margin: 0px; background-color: #eee">
+  <div style="color: red; line-height: 40px; display: none;">公告:亲爱的用户,系统正在维护升级.请等待!</div>
+  <div id="touchConfirmPadDiv">
+    <table style="width: 100%;height: 100%;">
+      <tbody><tr>
+        <td style="padding: 20px;"> 
+          <div id="touchArea">
+               <div style="height: 30px; line-height: 30px; text-align: center; color: #000; font-size: 18px; position:relative;">
+                <span id="touchPayStatus">长按3秒进行支付</span>
+                <a class="close-btn" id="colseBtn">×</a>
+               </div>
+             <div style="width: 100%; height: 5px; background-color: #ededed;border-radius:3px;">
+              <div id="touchProgress"></div>
+             </div>
+             <div style="margin-top: 30px;">
+              <img src="img/btn_touch_pay_0.png" id="btnTouchPay">
+             </div>
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+
+  </div>
+  <div id="runingLayout">下单中,请稍等...</div>
+  <input id="channelInput" type="hidden" value="weixin">
+  <input id="financingTargetIdInput" type="hidden" value="d07ec97b-08f5-4571-95c6-2c7de6ce01b0">
+  <input id="userIdInput" type="hidden" value="3488a482-a4fc-402a-a3bf-d916617e2879">
+  <input id="app_token" type="hidden" value="">
+  <input id="limitAmount" type="hidden" value="50000.00">
+  <input id="minAmount" type="hidden" value="1000.00">
+  <input id="periodInput" type="hidden" value="15">
+  <input id="targetTypeInput" type="hidden" value="CPB">
+
+  <table class="table1" style="margin:0px;">
+
+    <tbody><tr class="inputLine">
+      <td>购买金额</td>
+      <td><input id="buyAmountInput" type="number" placeholder="最低1000.00元起" value=""></td>
+      <td>元</td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div style="float: left;">可购份额 109000.00元</div>
+        <div style="float: right;">
+          
+            限额: 50000.00元
+          
+        </div>
+      </td>
+    </tr>
+
+  </tbody></table>
+
+  <div id="cashCouponSelectDiv" style="padding: 10px; display: none;">
+    现金券
+    <select>
+      <option value=""></option>
+    </select> 限银行卡支付使用
+  </div>
+
+
+  <table class="table1">
+    <tbody id="historyBankTab">
+      
+        <tr class="inputLine ">
+          <td style="width: 60px;"><input type="radio" class="scp" name="bankRadio" value="scb"></td>
+          <td><span>
+          随存宝&nbsp;  2,008.065  元 
+          <input type="hidden" id="scbAmountInput" value="2008.064794520547945">
+          </span></td>
+        </tr>
+      
+      
+      
+    <tr class="inputLine bank">
+        <td style="width: 60px;"><input type="radio" class="historyBankRadio" name="bankRadio" bank_code="0801020000" bank_name="工商银行" bank_card_no="6212261202001660605" holder="测试名字" pid="350000198411230000"></td>
+        <td><img class="bankIcon" style="width: 30px; float: left;" src="bank_logo/0801020000.png"><span class="bankInfo">工商银行 &nbsp;&nbsp;尾号 (0605) <br> 单笔<span style="color:red">2万</span>&nbsp;&nbsp;单日<span style="color:red">2万</span>&nbsp;&nbsp;单月<span style="color:red">50万</span></span></td>
+      </tr><tr class="inputLine" id="newBankInfo">
+        <td style="width: 60px;"><input type="radio" name="bankRadio"></td>
+        <td>使用其它银行卡</td>
+      </tr></tbody>
+  </table>
+
+  <table class="table1" id="newBankInfoTable" style="display: none;">
+
+
+    <tbody><tr class="inputLine">
+      <td>姓名</td>
+      <td><input id="nameInput" placeholder="请输入姓名" value=""></td>
+      <td></td>
+    </tr>
+    <tr class="inputLine">
+      <td>身份证</td>
+      <td><input id="pidInput" type="text" placeholder="请输入身份证" value=""></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="3"></td>
+    </tr>
+    <tr class="inputLine">
+      <td>支付方式</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="inputLine">
+      <td style="width: 90px;"><img id="bankIcon" src="bank_logo/no_bank.png" height="30"></td>
+      <td><select id="bankSelect" style="width: 100%; height: 100%; border: 0px; height: 30px;"><option value="no_bank" daytip="0万" singletip="0万" singlemoney="0" monthtip="0万">请选择银行</option><option value="0801020000" daytip="2万" singletip="2万" singlemoney="20000" monthtip="50万">工商银行</option><option value="0801030000" daytip="2万" singletip="2万" singlemoney="20000" monthtip="50万">农业银行</option><option value="0801040000" daytip="20万" singletip="5万" singlemoney="50000" monthtip="50万">中国银行</option><option value="0801050000" daytip="10万" singletip="5万" singlemoney="50000" monthtip="50万">建设银行</option><option value="0801000000" daytip="50万" singletip="20万" singlemoney="200000" monthtip="50万">邮政储蓄银行</option><option value="0804100000" daytip="50万" singletip="20万" singlemoney="200000" monthtip="50万">平安银行</option><option value="0803050000" daytip="50万" singletip="20万" singlemoney="200000" monthtip="50万">民生银行</option><option value="0803030000" daytip="50万" singletip="20万" singlemoney="200000" monthtip="50万">光大银行</option><option value="0803060000" daytip="50万" singletip="20万" singlemoney="200000" monthtip="50万">广发银行</option><option value="0803020000" daytip="50万" singletip="20万" singlemoney="200000" monthtip="50万">中信银行</option><option value="0803090000" daytip="5万" singletip="1万" singlemoney="10000" monthtip="50万">兴业银行</option><option value="0803040000" daytip="50万" singletip="20万" singlemoney="200000" monthtip="50万">华夏银行</option><option value="0803010000" daytip="5万" singletip="5万" singlemoney="50000" monthtip="50万">交通银行</option><option value="0803080000" daytip="20万" singletip="1000" singlemoney="1000" monthtip="50万">招商银行</option><option value="0803100000" daytip="49999元" singletip="49999元" singlemoney="49999" monthtip="50万">浦发银行</option></select></td>
+      <td></td>
+    </tr>
+    <tr class="inputLine">
+      <td>卡号</td>
+      <td colspan="2"><input id="bankCardNoInput" type="number" placeholder="请输入银行卡号" value=""></td>
+    </tr>
+    <tr>
+      <td colspan="3" style="color: gray;">限额:单笔<span class="singleTip"></span>元&nbsp;单日<span class="dayTip"></span>元&nbsp;单月<span class="monthTip"></span>元&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody></table>
+  <div id="submitLayout">
+    <button id="btnSubmit" class="btn btn-warning" style="width: 100%;">提交订单</button>
+
+  </div>
+  <form id="formPay" action="http://www-1.fuiou.com:18670/mobile_pay/timbnew/timb01.pay?t=1465132974902" method="post" target="_self">
+    <input name="t" value="Sun Jun 05 21:22:55 CST 2016" type="hidden">
+    <input name="mchntCd" type="hidden" value="0002900F0096235"> <input name="orderid" type="hidden" value=""> <input name="ono" type="hidden" value=""> <input name="backurl" type="hidden" value="http://test.laicunba.com/h5/fuiou_backurl.htm"> <input name="reurl" type="hidden" value="http://test.laicunba.com/h5/bid_form.htm?id=d07ec97b-08f5-4571-95c6-2c7de6ce01b0"> <input name="homeurl" type="hidden" value="http://test.laicunba.com/h5/fuiou_homeurl.htm"> <input name="name" type="hidden" value=""> <input name="sfz" type="hidden" value=""> <input name="md5" type="hidden" value="">
+  </form>
+  
+
+
+<div class="popBox" id="windowcenter">
+  <p class="pop_header" id="windowtitle">提示标题</p>
+  <div class="popconbox">
+    <div class="popconc" id="windowtext"></div>
+    <div class="popbtnbox" id="windowbuttons">
+      <a href="javascript:;" title="确定" class="popbtn sure dialogok">确定</a>
+      <a href="javascript:;" title="取消" class="popbtn cancel dialogcancel">取消</a>
+    </div>
+  </div>
+</div>
+<div id="windowpopbg" class="popbg" style="display:none;"></div>
+
+  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="bankCard.js?v=11"></script>
+  <script src="bid_form.js?v=11"></script>
+  <script type="text/javascript" src="lcb_wx_common.js?201604131"></script>
+
+</body></html>

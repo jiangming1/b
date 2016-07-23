@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Conntent type:</strong>
+  <%= @lcb_pic.conntent_type %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lcb_pic.name %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @lcb_pic.size %>
+</p>
+
+<p>
+  <strong>Path:</strong>
+  <%= @lcb_pic.path %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @lcb_pic.owner_id %>
+</p>
+
+<p>
+  <strong>Create uid:</strong>
+  <%= @lcb_pic.create_uid %>
+</p>
+
+<p>
+  <strong>Crite uid:</strong>
+  <%= @lcb_pic.crite_uid %>
+</p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @lcb_pic.id %>
+</p>
+
+<%= link_to 'Edit', edit_lcb_pic_path(@lcb_pic) %> |
+<%= link_to 'Back', lcb_pics_path %>

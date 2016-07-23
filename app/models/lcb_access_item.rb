@@ -1,0 +1,2 @@
+class LcbAccessItem < ApplicationRecord
+end

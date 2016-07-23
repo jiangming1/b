@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @lcb_manager_user.status %>
+</p>
+
+<p>
+  <strong>Login name:</strong>
+  <%= @lcb_manager_user.login_name %>
+</p>
+
+<p>
+  <strong>Login pwd:</strong>
+  <%= @lcb_manager_user.login_pwd %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @lcb_manager_user.mobile %>
+</p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @lcb_manager_user.id %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @lcb_manager_user.owner_id %>
+</p>
+
+<p>
+  <strong>Create uid:</strong>
+  <%= @lcb_manager_user.create_uid %>
+</p>
+
+<p>
+  <strong>Write uid:</strong>
+  <%= @lcb_manager_user.write_uid %>
+</p>
+
+<%= link_to 'Edit', edit_lcb_manager_user_path(@lcb_manager_user) %> |
+<%= link_to 'Back', lcb_manager_users_path %>

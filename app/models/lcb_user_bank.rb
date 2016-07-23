@@ -1,0 +1,2 @@
+class LcbUserBank < ApplicationRecord
+end

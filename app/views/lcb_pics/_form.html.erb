@@ -1,0 +1,57 @@
+<%= form_for(lcb_pic) do |f| %>
+  <% if lcb_pic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lcb_pic.errors.count, "error") %> prohibited this lcb_pic from being saved:</h2>
+
+      <ul>
+      <% lcb_pic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :conntent_type %>
+    <%= f.text_field :conntent_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :size %>
+    <%= f.number_field :size %>
+  </div>
+
+  <div class="field">
+    <%= f.label :path %>
+    <%= f.text_field :path %>
+  </div>
+
+  <div class="field">
+    <%= f.label :owner_id %>
+    <%= f.text_field :owner_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :create_uid %>
+    <%= f.text_field :create_uid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :crite_uid %>
+    <%= f.text_field :crite_uid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :id %>
+    <%= f.text_field :id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

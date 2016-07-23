@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb User Rewards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lcb user</th>
+      <th>Give out</th>
+      <th>Activity num</th>
+      <th>Reward num</th>
+      <th>Owner</th>
+      <th>Create uid</th>
+      <th>Write uid</th>
+      <th>Id</th>
+      <th>Reward desc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_user_rewards.each do |lcb_user_reward| %>
+      <tr>
+        <td><%= lcb_user_reward.lcb_user_id %></td>
+        <td><%= lcb_user_reward.give_out %></td>
+        <td><%= lcb_user_reward.activity_num %></td>
+        <td><%= lcb_user_reward.reward_num %></td>
+        <td><%= lcb_user_reward.owner_id %></td>
+        <td><%= lcb_user_reward.create_uid %></td>
+        <td><%= lcb_user_reward.write_uid %></td>
+        <td><%= lcb_user_reward.id %></td>
+        <td><%= lcb_user_reward.reward_desc %></td>
+        <td><%= link_to 'Show', lcb_user_reward %></td>
+        <td><%= link_to 'Edit', edit_lcb_user_reward_path(lcb_user_reward) %></td>
+        <td><%= link_to 'Destroy', lcb_user_reward, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb User Reward', new_lcb_user_reward_path %>

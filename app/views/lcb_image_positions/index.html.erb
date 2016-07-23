@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb Image Positions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Position</th>
+      <th>Begin time</th>
+      <th>Sort num</th>
+      <th>Link url</th>
+      <th>End time</th>
+      <th>Title</th>
+      <th>Image url</th>
+      <th>Owner</th>
+      <th>Create uid</th>
+      <th>Write uid</th>
+      <th>Id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_image_positions.each do |lcb_image_position| %>
+      <tr>
+        <td><%= lcb_image_position.position %></td>
+        <td><%= lcb_image_position.begin_time %></td>
+        <td><%= lcb_image_position.sort_num %></td>
+        <td><%= lcb_image_position.link_url %></td>
+        <td><%= lcb_image_position.end_time %></td>
+        <td><%= lcb_image_position.title %></td>
+        <td><%= lcb_image_position.image_url %></td>
+        <td><%= lcb_image_position.owner_id %></td>
+        <td><%= lcb_image_position.create_uid %></td>
+        <td><%= lcb_image_position.write_uid %></td>
+        <td><%= lcb_image_position.id %></td>
+        <td><%= link_to 'Show', lcb_image_position %></td>
+        <td><%= link_to 'Edit', edit_lcb_image_position_path(lcb_image_position) %></td>
+        <td><%= link_to 'Destroy', lcb_image_position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb Image Position', new_lcb_image_position_path %>

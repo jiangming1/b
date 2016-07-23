@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  login_pwd: MyString
+  login_name: MyString
+  mobile: MyString
+  true_name: MyString
+  id: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  pay_pwd: MyString
+  pid: MyString
+  invite_qr_code: MyString
+  invite_code: MyString
+  invite_from: MyString
+  channel: MyString
+  stutus: MyString
+  remain_profit: 9.99
+
+two:
+  login_pwd: MyString
+  login_name: MyString
+  mobile: MyString
+  true_name: MyString
+  id: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  pay_pwd: MyString
+  pid: MyString
+  invite_qr_code: MyString
+  invite_code: MyString
+  invite_from: MyString
+  channel: MyString
+  stutus: MyString
+  remain_profit: 9.99

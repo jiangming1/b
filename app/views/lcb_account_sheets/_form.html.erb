@@ -1,0 +1,112 @@
+<%= form_for(lcb_account_sheet) do |f| %>
+  <% if lcb_account_sheet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lcb_account_sheet.errors.count, "error") %> prohibited this lcb_account_sheet from being saved:</h2>
+
+      <ul>
+      <% lcb_account_sheet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sign %>
+    <%= f.text_field :sign %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.number_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :row_num %>
+    <%= f.number_field :row_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :balance %>
+    <%= f.text_field :balance %>
+  </div>
+
+  <div class="field">
+    <%= f.label :opt_user_id %>
+    <%= f.text_field :opt_user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dr %>
+    <%= f.text_field :dr %>
+  </div>
+
+  <div class="field">
+    <%= f.label :certificate_id %>
+    <%= f.text_field :certificate_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cr %>
+    <%= f.text_field :cr %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ext %>
+    <%= f.text_field :ext %>
+  </div>
+
+  <div class="field">
+    <%= f.label :account_id %>
+    <%= f.text_field :account_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rid %>
+    <%= f.text_field :rid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :remark %>
+    <%= f.text_field :remark %>
+  </div>
+
+  <div class="field">
+    <%= f.label :checker_uid %>
+    <%= f.text_field :checker_uid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :check_remark %>
+    <%= f.text_field :check_remark %>
+  </div>
+
+  <div class="field">
+    <%= f.label :check_date %>
+    <%= f.datetime_select :check_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :id %>
+    <%= f.text_field :id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :owner_id %>
+    <%= f.text_field :owner_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :create_uid %>
+    <%= f.text_field :create_uid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :write_uid %>
+    <%= f.text_field :write_uid %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

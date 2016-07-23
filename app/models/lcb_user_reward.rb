@@ -1,0 +1,2 @@
+class LcbUserReward < ApplicationRecord
+end

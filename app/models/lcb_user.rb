@@ -1,0 +1,2 @@
+class LcbUser < ApplicationRecord
+end

@@ -1,0 +1,1 @@
+json.extract! @lcb_withdraw_financing_target_bid_item, :id, :status, :withdraw_profit, :withdraw_principal, :withdraw_id, :financing_target_bid_id, :id, :owner_id, :create_uid, :write_uid, :created_at, :updated_at

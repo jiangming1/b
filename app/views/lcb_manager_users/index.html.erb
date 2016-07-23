@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb Manager Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Login name</th>
+      <th>Login pwd</th>
+      <th>Mobile</th>
+      <th>Id</th>
+      <th>Owner</th>
+      <th>Create uid</th>
+      <th>Write uid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_manager_users.each do |lcb_manager_user| %>
+      <tr>
+        <td><%= lcb_manager_user.status %></td>
+        <td><%= lcb_manager_user.login_name %></td>
+        <td><%= lcb_manager_user.login_pwd %></td>
+        <td><%= lcb_manager_user.mobile %></td>
+        <td><%= lcb_manager_user.id %></td>
+        <td><%= lcb_manager_user.owner_id %></td>
+        <td><%= lcb_manager_user.create_uid %></td>
+        <td><%= lcb_manager_user.write_uid %></td>
+        <td><%= link_to 'Show', lcb_manager_user %></td>
+        <td><%= link_to 'Edit', edit_lcb_manager_user_path(lcb_manager_user) %></td>
+        <td><%= link_to 'Destroy', lcb_manager_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb Manager User', new_lcb_manager_user_path %>

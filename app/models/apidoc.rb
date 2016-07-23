@@ -1,0 +1,2 @@
+class Apidoc < ApplicationRecord
+end

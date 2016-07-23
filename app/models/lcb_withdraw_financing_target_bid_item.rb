@@ -1,0 +1,2 @@
+class LcbWithdrawFinancingTargetBidItem < ApplicationRecord
+end

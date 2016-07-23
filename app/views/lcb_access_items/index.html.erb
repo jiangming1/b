@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb Access Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item type</th>
+      <th>Action</th>
+      <th>Role</th>
+      <th>Menu</th>
+      <th>Id</th>
+      <th>Create uid</th>
+      <th>Write uid</th>
+      <th>Owner</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_access_items.each do |lcb_access_item| %>
+      <tr>
+        <td><%= lcb_access_item.item_type %></td>
+        <td><%= lcb_access_item.action_id %></td>
+        <td><%= lcb_access_item.role_id %></td>
+        <td><%= lcb_access_item.menu_id %></td>
+        <td><%= lcb_access_item.id %></td>
+        <td><%= lcb_access_item.create_uid %></td>
+        <td><%= lcb_access_item.write_uid %></td>
+        <td><%= lcb_access_item.owner_id %></td>
+        <td><%= link_to 'Show', lcb_access_item %></td>
+        <td><%= link_to 'Edit', edit_lcb_access_item_path(lcb_access_item) %></td>
+        <td><%= link_to 'Destroy', lcb_access_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb Access Item', new_lcb_access_item_path %>

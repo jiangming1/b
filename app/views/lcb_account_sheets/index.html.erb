@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb Account Sheets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sign</th>
+      <th>Status</th>
+      <th>Row num</th>
+      <th>Balance</th>
+      <th>Opt user</th>
+      <th>Dr</th>
+      <th>Certificate</th>
+      <th>Cr</th>
+      <th>Ext</th>
+      <th>Account</th>
+      <th>Rid</th>
+      <th>Remark</th>
+      <th>Checker uid</th>
+      <th>Check remark</th>
+      <th>Check date</th>
+      <th>Id</th>
+      <th>Owner</th>
+      <th>Create uid</th>
+      <th>Write uid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_account_sheets.each do |lcb_account_sheet| %>
+      <tr>
+        <td><%= lcb_account_sheet.sign %></td>
+        <td><%= lcb_account_sheet.status %></td>
+        <td><%= lcb_account_sheet.row_num %></td>
+        <td><%= lcb_account_sheet.balance %></td>
+        <td><%= lcb_account_sheet.opt_user_id %></td>
+        <td><%= lcb_account_sheet.dr %></td>
+        <td><%= lcb_account_sheet.certificate_id %></td>
+        <td><%= lcb_account_sheet.cr %></td>
+        <td><%= lcb_account_sheet.ext %></td>
+        <td><%= lcb_account_sheet.account_id %></td>
+        <td><%= lcb_account_sheet.rid %></td>
+        <td><%= lcb_account_sheet.remark %></td>
+        <td><%= lcb_account_sheet.checker_uid %></td>
+        <td><%= lcb_account_sheet.check_remark %></td>
+        <td><%= lcb_account_sheet.check_date %></td>
+        <td><%= lcb_account_sheet.id %></td>
+        <td><%= lcb_account_sheet.owner_id %></td>
+        <td><%= lcb_account_sheet.create_uid %></td>
+        <td><%= lcb_account_sheet.write_uid %></td>
+        <td><%= link_to 'Show', lcb_account_sheet %></td>
+        <td><%= link_to 'Edit', edit_lcb_account_sheet_path(lcb_account_sheet) %></td>
+        <td><%= link_to 'Destroy', lcb_account_sheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb Account Sheet', new_lcb_account_sheet_path %>

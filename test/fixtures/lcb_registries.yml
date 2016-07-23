@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  visible: false
+  summary: MyString
+  val: MyString
+  regex: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  id: MyString
+
+two:
+  visible: false
+  summary: MyString
+  val: MyString
+  regex: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  id: MyString

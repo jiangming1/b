@@ -1,0 +1,2 @@
+class Yunwei < ApplicationRecord
+end

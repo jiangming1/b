@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  user_id: MyString
+  amount: 9.99
+  summary: MyString
+  begin_time: 2016-05-29 14:30:31
+  end_time: 2016-05-29 14:30:31
+  conditions: MyString
+  used_amount: 9.99
+  financing_target_bid_id: MyString
+  def_id: MyString
+  id: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+
+two:
+  name: MyString
+  user_id: MyString
+  amount: 9.99
+  summary: MyString
+  begin_time: 2016-05-29 14:30:31
+  end_time: 2016-05-29 14:30:31
+  conditions: MyString
+  used_amount: 9.99
+  financing_target_bid_id: MyString
+  def_id: MyString
+  id: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString

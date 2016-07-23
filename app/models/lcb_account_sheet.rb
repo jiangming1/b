@@ -1,0 +1,2 @@
+class LcbAccountSheet < ApplicationRecord
+end

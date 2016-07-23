@@ -1,0 +1,96 @@
+
+
+<style>
+.tab1 {
+  width: 100%;
+}
+
+body {
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.input1 {
+  width: 100%;
+  height: 40px;
+}
+
+.errorInfo {
+  color: red;
+}
+</style>
+<body>
+  <table class="tab1">
+    <tr>
+      <td style="width: 50%;"><img src="<%=asset_path('/img/logo_m.png')%>" style="width: 100%;" /></td>
+      <td valign="bottom" style="text-align: right; padding-right: 10px;">没有账号，立即<a href="/lcb_users/new">注册</a></td>
+    </tr>
+  </table>
+
+<%= form_tag "/login1" do %>
+    <input type="hidden" name="loginPwd" id="loginPwdMd5Input" />
+    <div style="height: 30px;"></div>
+    <input name="mobile" class="input1 form-control" placeholder="请输入手机号码" id="mobileInput" value="" />
+    <div id="mobileInfo" class="errorInfo"></div>
+    <div style="height: 10px;"></div>
+    <input name="loginpwd1" class="input1 form-control" placeholder="请输入登录密码" type="password" id="loginPwd" />
+.
+    <div id="pwdInfo" class="errorInfo"></div>
+    <div style="text-align: right; line-height: 50px;">
+      <a href="/lcb_users/forget_loginpwd">忘记密码?</a>
+    </div>
+    <div style="text-align: center;">
+      <button id="btnLogin" class="btn btn-warning" type="submit" style="background-color: #f37b1d; width: 80%; border: 1px solid #f37b1d; height: 40px;">立即登录</button>
+    </div>
+  </form>
+  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="../static/md5.js"></script>
+  <script type="text/javascript">
+    function checkParam() {
+      $(".errorInfo").hide();
+      var p = {
+        t : new Date(),
+        mobile : $("#mobileInput").val(),
+        loginPwd : $("#loginPwdInput").val()
+      };
+      if (!p.mobile) {
+        $("#mobileInput").focus();
+        return false;
+      }
+      if (!p.loginPwd) {
+        $("#loginPwdInput").focus();
+        return false;
+      }
+      $("#loginPwdMd5Input").val(MD5(p.loginPwd));
+      return true;
+    }
+  </script>
+
+
+
+
+<% end %>
+<div id="bottomLayout">
+    <a class="btn1" href="home.htm?tab=home&amp;t=Sat Jun 04 01:16:16 CST 2016">
+      
+          
+            <img class="icon" src="img/icon_home_n.png">
+            <div class="text" style="color: #888888;">首页</div>
+          
+              </a>
+              <a class="btn1" href="financial_zone.htm?tab=zone&amp;t=Sat Jun 04 01:16:16 CST 2016">
+                
+                    
+                      <img class="icon" src="img/icon_licai_n.png">
+                      <div class="text" style="color: #888888;">理财专区</div>
+                    
+                        </a>
+                        <a class="btn1" href="my_account.htm?tab=account&amp;t=Sat Jun 04 01:16:16 CST 2016" style="float: right;">
+                          
+                              
+                                <img class="icon" src="img/icon_myaccount_n.png">
+                                <div class="text" style="color: #888888;">我的账户</div>
+                              
+                                  </a>
+                                </div>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uri:</strong>
+  <%= @lcb_action.uri %>
+</p>
+
+<p>
+  <strong>Action name:</strong>
+  <%= @lcb_action.action_name %>
+</p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @lcb_action.id %>
+</p>
+
+<p>
+  <strong>Create uid:</strong>
+  <%= @lcb_action.create_uid %>
+</p>
+
+<p>
+  <strong>Write uid:</strong>
+  <%= @lcb_action.write_uid %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @lcb_action.owner_id %>
+</p>
+
+<%= link_to 'Edit', edit_lcb_action_path(@lcb_action) %> |
+<%= link_to 'Back', lcb_actions_path %>

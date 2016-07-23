@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb Menus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Separator</th>
+      <th>Icon</th>
+      <th>Target</th>
+      <th>Parent menu</th>
+      <th>Sort num</th>
+      <th>Quick btn</th>
+      <th>Menu name</th>
+      <th>Url</th>
+      <th>Id</th>
+      <th>Owner</th>
+      <th>Create uid</th>
+      <th>Write uid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_menus.each do |lcb_menu| %>
+      <tr>
+        <td><%= lcb_menu.separator %></td>
+        <td><%= lcb_menu.icon %></td>
+        <td><%= lcb_menu.target %></td>
+        <td><%= lcb_menu.parent_menu_id %></td>
+        <td><%= lcb_menu.sort_num %></td>
+        <td><%= lcb_menu.quick_btn %></td>
+        <td><%= lcb_menu.menu_name %></td>
+        <td><%= lcb_menu.url %></td>
+        <td><%= lcb_menu.id %></td>
+        <td><%= lcb_menu.owner_id %></td>
+        <td><%= lcb_menu.create_uid %></td>
+        <td><%= lcb_menu.write_uid %></td>
+        <td><%= link_to 'Show', lcb_menu %></td>
+        <td><%= link_to 'Edit', edit_lcb_menu_path(lcb_menu) %></td>
+        <td><%= link_to 'Destroy', lcb_menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb Menu', new_lcb_menu_path %>

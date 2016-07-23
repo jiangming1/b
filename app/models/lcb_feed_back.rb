@@ -1,0 +1,2 @@
+class LcbFeedBack < ApplicationRecord
+end

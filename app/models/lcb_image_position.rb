@@ -1,0 +1,2 @@
+class LcbImagePosition < ApplicationRecord
+end

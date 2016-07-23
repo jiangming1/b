@@ -1,0 +1,2 @@
+module LcbPicsHelper
+end

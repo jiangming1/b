@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb Pics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Conntent type</th>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Path</th>
+      <th>Owner</th>
+      <th>Create uid</th>
+      <th>Crite uid</th>
+      <th>Id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_pics.each do |lcb_pic| %>
+      <tr>
+        <td><%= lcb_pic.conntent_type %></td>
+        <td><%= lcb_pic.name %></td>
+        <td><%= lcb_pic.size %></td>
+        <td><%= lcb_pic.path %></td>
+        <td><%= lcb_pic.owner_id %></td>
+        <td><%= lcb_pic.create_uid %></td>
+        <td><%= lcb_pic.crite_uid %></td>
+        <td><%= lcb_pic.id %></td>
+        <td><%= link_to 'Show', lcb_pic %></td>
+        <td><%= link_to 'Edit', edit_lcb_pic_path(lcb_pic) %></td>
+        <td><%= link_to 'Destroy', lcb_pic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb Pic', new_lcb_pic_path %>

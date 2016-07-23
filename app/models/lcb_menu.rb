@@ -1,0 +1,2 @@
+class LcbMenu < ApplicationRecord
+end

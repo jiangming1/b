@@ -1,0 +1,2 @@
+class LcbFinancingTargetBid < ApplicationRecord
+end

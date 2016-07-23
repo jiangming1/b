@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item type:</strong>
+  <%= @lcb_access_item.item_type %>
+</p>
+
+<p>
+  <strong>Action:</strong>
+  <%= @lcb_access_item.action_id %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @lcb_access_item.role_id %>
+</p>
+
+<p>
+  <strong>Menu:</strong>
+  <%= @lcb_access_item.menu_id %>
+</p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @lcb_access_item.id %>
+</p>
+
+<p>
+  <strong>Create uid:</strong>
+  <%= @lcb_access_item.create_uid %>
+</p>
+
+<p>
+  <strong>Write uid:</strong>
+  <%= @lcb_access_item.write_uid %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @lcb_access_item.owner_id %>
+</p>
+
+<%= link_to 'Edit', edit_lcb_access_item_path(@lcb_access_item) %> |
+<%= link_to 'Back', lcb_access_items_path %>

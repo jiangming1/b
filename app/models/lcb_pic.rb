@@ -1,0 +1,2 @@
+class LcbPic < ApplicationRecord
+end

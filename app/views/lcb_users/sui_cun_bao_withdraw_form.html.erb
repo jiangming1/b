@@ -1,0 +1,152 @@
+<html lang="zh-CN"><head>
+<meta content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+<meta charset="utf-8">
+<title>随存宝</title>
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="css/lcb_wx_common.css?201604141">
+<style type="text/css">
+body {
+  background-color: #eee;
+}
+
+* {
+  font-size: 1em;
+  font-family: "微软雅黑";
+}
+
+#div2 table {
+  width: 100%;
+}
+
+.table td {
+  border: 0px !important;
+}
+
+.money {
+  text-align: right;
+  color: #fa9f59;
+  font-size: 16px;
+}
+
+.table2 {
+  width: 100%;
+}
+
+.table2 td {
+  padding: 5px 0px 0px 0px;
+}
+
+.blockDiv {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+  width: 100%;
+}
+
+#bankCardSelect {
+  border: 0px;
+  width: 100%;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+  
+  <input type="hidden" id="deviceInput" value="">
+  <input type="hidden" id="app_token" value="">
+  <div style="padding: 10px;">
+    <div id="div2" class="blockDiv">
+
+      <table id="cardSelectTable" style="display: none;">
+        <tbody><tr>
+          <td style="width: 60px; padding-top: 10px; padding-bottom: 10px;"><img id="bankLogo" src="bank_logo/0801020000.png" width="50px;"></td>
+          <td style="text-align: left;"><select id="bankCardSelect"><option value="0801020000_81f6ad15-045a-44a9-bcd7-20218bc3ff56">工商银行     &nbsp;&nbsp;尾号 (0605)</option></select></td>
+        </tr>
+
+      </tbody></table>
+      <div style="line-height: 40px;">
+        自动转到您的购买银行卡
+      </div>
+      <div style="width: 100%; border-bottom: 1px dashed #ccc;"></div>
+
+      <table class="table2">
+        <tbody><tr>
+          <td>可提现本金</td>
+          <td class="money principal">2000.00</td>
+        </tr>
+        <tr>
+          <td>可提现收益</td>
+          <td class="money totalProfit">8.06</td>
+        </tr>
+      </tbody></table>
+
+    </div>
+
+
+    <div id="div2" class="blockDiv" style="margin-top: 10px;">
+      <table class="table2">
+        <tbody><tr>
+          <td>提现金额 <span style="color: #fa9f59; font-weight: bold; font-size: 20px;">|</span></td>
+          <td><input type="number" id="withdrawMoneyInput" style="width: 100%; height: 35px; border: 0px; padding-left: 5px; color: #fa9f59" placeholder="最多2008.06"></td>
+          <td>元</td>
+        </tr>
+      </tbody></table>
+    </div>
+    <table class="table2" style="display: none;">
+      <tbody><tr>
+        <td>一同转出收益:<span class="money withdrawProfit">0.00</span>元
+        </td>
+        <td>共到账金额:<span class="money principalAndProfit">0.00</span>元
+        </td>
+      </tr>
+
+    </tbody></table>
+
+    <button id="btnWithdraw" class="btn btn-warning" style="width: 100%; font-size: 20px; margin-top: 20px;color: #fff; background-color: #f0ad4e; border-color: #eea236; line-height: 0;">提现</button>
+  </div>
+  <div style="margin-left:5%;">提现说明：</div>
+    <div style="border:1px solid #DDD;margin:10px 5%; border-radius:5px;padding:10px 0 10px 15px;">
+    <table>
+       <tbody>
+           <tr>
+              <td>1.最低100起提；</td>
+           </tr>
+           <tr>
+              <td>2.当日购买，次日方可提现；</td>
+           </tr>
+           <tr>
+              <td>3.当日只可提现一次；</td>
+           </tr>
+           <tr>
+              <td>4.当日15:00前提现次日到账，15:00后提现后天到账；</td>
+           </tr>
+           <tr>
+              <td>5.周六周日(节假日)提现，顺延到工作日到账。</td>
+           </tr>
+        </tbody>
+    </table>
+    </div>
+  
+
+
+<div class="popBox" id="windowcenter">
+  <p class="pop_header" id="windowtitle">提示标题</p>
+  <div class="popconbox">
+    <div class="popconc" id="windowtext"></div>
+    <div class="popbtnbox" id="windowbuttons">
+      <a href="javascript:;" title="确定" class="popbtn sure dialogok">确定</a>
+      <a href="javascript:;" title="取消" class="popbtn cancel dialogcancel">取消</a>
+    </div>
+  </div>
+</div>
+<div id="windowpopbg" class="popbg" style="display:none;"></div>
+
+  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="base.js"></script>
+  <script src="bankCard.js"></script>
+  <script src="sui_cun_bao_withdraw.js?v=4"></script>
+  <script type="text/javascript" src="lcb_wx_common.js?201604141"></script>
+
+</body></html>

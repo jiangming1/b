@@ -1,0 +1,112 @@
+<%= form_for(lcb_withdraw) do |f| %>
+  <% if lcb_withdraw.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lcb_withdraw.errors.count, "error") %> prohibited this lcb_withdraw from being saved:</h2>
+
+      <ul>
+      <% lcb_withdraw.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :type %>
+    <%= f.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bank_card_no %>
+    <%= f.text_field :bank_card_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bank_name %>
+    <%= f.text_field :bank_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pid %>
+    <%= f.text_field :pid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :withdraw_profit %>
+    <%= f.text_field :withdraw_profit %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :withdraw_principal %>
+    <%= f.text_field :withdraw_principal %>
+  </div>
+
+  <div class="field">
+    <%= f.label :summary %>
+    <%= f.text_field :summary %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bank_no %>
+    <%= f.text_field :bank_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :opt_time %>
+    <%= f.text_field :opt_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :opt_summary %>
+    <%= f.text_field :opt_summary %>
+  </div>
+
+  <div class="field">
+    <%= f.label :id %>
+    <%= f.text_field :id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :owner_id %>
+    <%= f.text_field :owner_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :create_uid %>
+    <%= f.text_field :create_uid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :write_uid %>
+    <%= f.text_field :write_uid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mark %>
+    <%= f.text_field :mark %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subtract_remain_profit %>
+    <%= f.text_field :subtract_remain_profit %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

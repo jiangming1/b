@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb Financing Targets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Code</th>
+      <th>Period</th>
+      <th>Annualized rates</th>
+      <th>Collect amount</th>
+      <th>Finish amount</th>
+      <th>Limit amount</th>
+      <th>Begin date</th>
+      <th>End date</th>
+      <th>Name</th>
+      <th>Owner</th>
+      <th>Create uid</th>
+      <th>Write uid</th>
+      <th>Id</th>
+      <th>Description</th>
+      <th>Interest way</th>
+      <th>Min amount</th>
+      <th>Bid count</th>
+      <th>Type</th>
+      <th>Profit flag</th>
+      <th>Pics</th>
+      <th>Pics description</th>
+      <th>Cash mask</th>
+      <th>Draft info</th>
+      <th>New investor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_financing_targets.each do |lcb_financing_target| %>
+      <tr>
+        <td><%= lcb_financing_target.status %></td>
+        <td><%= lcb_financing_target.code %></td>
+        <td><%= lcb_financing_target.period %></td>
+        <td><%= lcb_financing_target.annualized_rates %></td>
+        <td><%= lcb_financing_target.collect_amount %></td>
+        <td><%= lcb_financing_target.finish_amount %></td>
+        <td><%= lcb_financing_target.limit_amount %></td>
+        <td><%= lcb_financing_target.begin_date %></td>
+        <td><%= lcb_financing_target.end_date %></td>
+        <td><%= lcb_financing_target.name %></td>
+        <td><%= lcb_financing_target.owner_id %></td>
+        <td><%= lcb_financing_target.create_uid %></td>
+        <td><%= lcb_financing_target.write_uid %></td>
+        <td><%= lcb_financing_target.id %></td>
+        <td><%= lcb_financing_target.description %></td>
+        <td><%= lcb_financing_target.interest_way %></td>
+        <td><%= lcb_financing_target.min_amount %></td>
+        <td><%= lcb_financing_target.bid_count %></td>
+        <td><%= lcb_financing_target.type %></td>
+        <td><%= lcb_financing_target.profit_flag %></td>
+        <td><%= lcb_financing_target.pics %></td>
+        <td><%= lcb_financing_target.pics_description %></td>
+        <td><%= lcb_financing_target.cash_mask %></td>
+        <td><%= lcb_financing_target.draft_info %></td>
+        <td><%= lcb_financing_target.new_investor %></td>
+        <td><%= link_to 'Show', lcb_financing_target %></td>
+        <td><%= link_to 'Edit', edit_lcb_financing_target_path(lcb_financing_target) %></td>
+        <td><%= link_to 'Destroy', lcb_financing_target, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb Financing Target', new_lcb_financing_target_path %>

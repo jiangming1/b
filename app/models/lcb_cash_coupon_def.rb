@@ -1,0 +1,2 @@
+class LcbCashCouponDef < ApplicationRecord
+end

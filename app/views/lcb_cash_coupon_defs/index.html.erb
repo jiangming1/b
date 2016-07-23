@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb Cash Coupon Defs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Summary</th>
+      <th>Valid day</th>
+      <th>Used quantity</th>
+      <th>Total quantity</th>
+      <th>Begin time</th>
+      <th>End time</th>
+      <th>Conditions</th>
+      <th>Id</th>
+      <th>Owner</th>
+      <th>Create uid</th>
+      <th>Write uid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_cash_coupon_defs.each do |lcb_cash_coupon_def| %>
+      <tr>
+        <td><%= lcb_cash_coupon_def.name %></td>
+        <td><%= lcb_cash_coupon_def.amount %></td>
+        <td><%= lcb_cash_coupon_def.summary %></td>
+        <td><%= lcb_cash_coupon_def.valid_day %></td>
+        <td><%= lcb_cash_coupon_def.used_quantity %></td>
+        <td><%= lcb_cash_coupon_def.total_quantity %></td>
+        <td><%= lcb_cash_coupon_def.begin_time %></td>
+        <td><%= lcb_cash_coupon_def.end_time %></td>
+        <td><%= lcb_cash_coupon_def.conditions %></td>
+        <td><%= lcb_cash_coupon_def.id %></td>
+        <td><%= lcb_cash_coupon_def.owner_id %></td>
+        <td><%= lcb_cash_coupon_def.create_uid %></td>
+        <td><%= lcb_cash_coupon_def.write_uid %></td>
+        <td><%= link_to 'Show', lcb_cash_coupon_def %></td>
+        <td><%= link_to 'Edit', edit_lcb_cash_coupon_def_path(lcb_cash_coupon_def) %></td>
+        <td><%= link_to 'Destroy', lcb_cash_coupon_def, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb Cash Coupon Def', new_lcb_cash_coupon_def_path %>

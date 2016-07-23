@@ -1,0 +1,79 @@
+<style type="text/css">
+.tab1 {
+  width: 100%;
+}
+
+body {
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.input1 {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 0px !important;
+}
+
+#btnGetVerfityCode {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 26px;
+}
+
+.errorInfo {
+  color: red;
+}
+</style>
+<%= form_for(lcb_user) do |f| %>
+  <% if lcb_user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lcb_user.errors.count, "error") %> prohibited this lcb_user from being saved:</h2>
+
+      <ul>
+      <% lcb_user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <table class="tab1">
+    <tr>
+      <td style="width: 50%;"><img src="/img/logo_m.png" style="width: 100%;" /></td>
+      <td valign="bottom" style="text-align: right; padding-right: 10px;">已有账号，立即<a href="/lcb_users/login">登录</a></td>
+    </tr>
+  </table>
+  <div style="height: 30px;"></div>
+  
+  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="../static/md5.js"></script>
+  <script src="regist.js"></script>
+
+
+  <div class="field">
+    <%= f.text_field :mobile,class:"input1 form-control",placeholder:"请输入手机号码" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :login_pwd,class:"input1 form-control",placeholder: "输入6-16为字母或数字密码" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :owner_id,class:"input1 form-control",placeholder: "邀请人选填" %>
+  </div>
+
+  <div class="input-group" style="margin-top: 10px; height: 40px;">
+    <input id="verifyCodeInput" type="text" class="form-control" id="exampleInputAmount" placeholder="短信验证码" style="height: 40px; border-radius: 0px" />
+    <div class="input-group-addon" style="border-radius: 0px">
+      <a id="btnGetVerfityCode">获取短信验证码</a>
+    </div>
+  </div>
+  <div id="verifyCodeInputInfo" class="errorInfo"></div>
+  <div style="text-align: center; margin-top: 20px;">
+    <button id="btnRegist" class="btn btn-warning" style="background-color: #f37b1d; width: 100%; border: 1px solid #f37b1d; height: 40px;">确认注册</button>
+  </div>
+<% end %>

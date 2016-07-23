@@ -1,0 +1,2 @@
+class LcbTemplate < ApplicationRecord
+end

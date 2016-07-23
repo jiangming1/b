@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lcb_user_id: MyString
+  give_out: false
+  activity_num: MyString
+  reward_num: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  id: MyString
+  reward_desc: MyString
+
+two:
+  lcb_user_id: MyString
+  give_out: false
+  activity_num: MyString
+  reward_num: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  id: MyString
+  reward_desc: MyString

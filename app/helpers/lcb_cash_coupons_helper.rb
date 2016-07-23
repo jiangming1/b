@@ -1,0 +1,2 @@
+module LcbCashCouponsHelper
+end

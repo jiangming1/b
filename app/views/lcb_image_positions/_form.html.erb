@@ -1,0 +1,72 @@
+<%= form_for(lcb_image_position) do |f| %>
+  <% if lcb_image_position.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lcb_image_position.errors.count, "error") %> prohibited this lcb_image_position from being saved:</h2>
+
+      <ul>
+      <% lcb_image_position.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :position %>
+    <%= f.text_field :position %>
+  </div>
+
+  <div class="field">
+    <%= f.label :begin_time %>
+    <%= f.datetime_select :begin_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sort_num %>
+    <%= f.text_field :sort_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :link_url %>
+    <%= f.text_field :link_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_time %>
+    <%= f.datetime_select :end_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :owner_id %>
+    <%= f.text_field :owner_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :create_uid %>
+    <%= f.text_field :create_uid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :write_uid %>
+    <%= f.text_field :write_uid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :id %>
+    <%= f.text_field :id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

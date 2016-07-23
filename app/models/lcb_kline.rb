@@ -1,0 +1,2 @@
+class LcbKline < ApplicationRecord
+end

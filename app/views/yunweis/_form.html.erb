@@ -1,0 +1,27 @@
+<%= form_for(yunwei) do |f| %>
+  <% if yunwei.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(yunwei.errors.count, "error") %> prohibited this yunwei from being saved:</h2>
+
+      <ul>
+      <% yunwei.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :jobs %>
+    <%= f.text_field :jobs %>
+  </div>
+
+  <div class="field">
+    <%= f.label :command %>
+    <%= f.text_area :command %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

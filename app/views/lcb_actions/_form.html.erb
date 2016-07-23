@@ -1,0 +1,47 @@
+<%= form_for(lcb_action) do |f| %>
+  <% if lcb_action.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lcb_action.errors.count, "error") %> prohibited this lcb_action from being saved:</h2>
+
+      <ul>
+      <% lcb_action.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :uri %>
+    <%= f.text_field :uri %>
+  </div>
+
+  <div class="field">
+    <%= f.label :action_name %>
+    <%= f.text_field :action_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :id %>
+    <%= f.text_field :id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :create_uid %>
+    <%= f.text_field :create_uid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :write_uid %>
+    <%= f.text_field :write_uid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :owner_id %>
+    <%= f.text_field :owner_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

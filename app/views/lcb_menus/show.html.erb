@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Separator:</strong>
+  <%= @lcb_menu.separator %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @lcb_menu.icon %>
+</p>
+
+<p>
+  <strong>Target:</strong>
+  <%= @lcb_menu.target %>
+</p>
+
+<p>
+  <strong>Parent menu:</strong>
+  <%= @lcb_menu.parent_menu_id %>
+</p>
+
+<p>
+  <strong>Sort num:</strong>
+  <%= @lcb_menu.sort_num %>
+</p>
+
+<p>
+  <strong>Quick btn:</strong>
+  <%= @lcb_menu.quick_btn %>
+</p>
+
+<p>
+  <strong>Menu name:</strong>
+  <%= @lcb_menu.menu_name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @lcb_menu.url %>
+</p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @lcb_menu.id %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @lcb_menu.owner_id %>
+</p>
+
+<p>
+  <strong>Create uid:</strong>
+  <%= @lcb_menu.create_uid %>
+</p>
+
+<p>
+  <strong>Write uid:</strong>
+  <%= @lcb_menu.write_uid %>
+</p>
+
+<%= link_to 'Edit', edit_lcb_menu_path(@lcb_menu) %> |
+<%= link_to 'Back', lcb_menus_path %>

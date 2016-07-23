@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb Klines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Open price</th>
+      <th>Height price</th>
+      <th>Low price</th>
+      <th>Closed price</th>
+      <th>Id</th>
+      <th>Owner</th>
+      <th>Create uid</th>
+      <th>Write uid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_klines.each do |lcb_kline| %>
+      <tr>
+        <td><%= lcb_kline.type %></td>
+        <td><%= lcb_kline.open_price %></td>
+        <td><%= lcb_kline.height_price %></td>
+        <td><%= lcb_kline.low_price %></td>
+        <td><%= lcb_kline.closed_price %></td>
+        <td><%= lcb_kline.id %></td>
+        <td><%= lcb_kline.owner_id %></td>
+        <td><%= lcb_kline.create_uid %></td>
+        <td><%= lcb_kline.write_uid %></td>
+        <td><%= link_to 'Show', lcb_kline %></td>
+        <td><%= link_to 'Edit', edit_lcb_kline_path(lcb_kline) %></td>
+        <td><%= link_to 'Destroy', lcb_kline, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb Kline', new_lcb_kline_path %>

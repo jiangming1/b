@@ -1,0 +1,2 @@
+class LcbAccount < ApplicationRecord
+end

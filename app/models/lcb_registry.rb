@@ -1,0 +1,2 @@
+class LcbRegistry < ApplicationRecord
+end

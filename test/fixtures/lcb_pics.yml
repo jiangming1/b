@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  conntent_type: MyString
+  name: MyString
+  size: 1
+  path: MyString
+  owner_id: MyString
+  create_uid: MyString
+  crite_uid: MyString
+  id: MyString
+
+two:
+  conntent_type: MyString
+  name: MyString
+  size: 1
+  path: MyString
+  owner_id: MyString
+  create_uid: MyString
+  crite_uid: MyString
+  id: MyString

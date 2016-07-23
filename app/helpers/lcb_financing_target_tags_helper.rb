@@ -1,0 +1,2 @@
+module LcbFinancingTargetTagsHelper
+end

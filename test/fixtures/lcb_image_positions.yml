@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  position: MyString
+  begin_time: 2016-05-29 14:25:39
+  sort_num: 9.99
+  link_url: MyString
+  end_time: 2016-05-29 14:25:39
+  title: MyString
+  image_url: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  id: MyString
+
+two:
+  position: MyString
+  begin_time: 2016-05-29 14:25:39
+  sort_num: 9.99
+  link_url: MyString
+  end_time: 2016-05-29 14:25:39
+  title: MyString
+  image_url: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  id: MyString

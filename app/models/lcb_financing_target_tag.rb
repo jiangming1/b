@@ -1,0 +1,2 @@
+class LcbFinancingTargetTag < ApplicationRecord
+end

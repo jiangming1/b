@@ -1,0 +1,2 @@
+module LcbFinancingTargetBidsHelper
+end

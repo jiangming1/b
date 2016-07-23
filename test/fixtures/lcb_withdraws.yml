@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  status: MyString
+  bank_card_no: MyString
+  bank_name: MyString
+  pid: MyString
+  withdraw_profit: 9.99
+  user_id: MyString
+  withdraw_principal: 9.99
+  summary: MyString
+  bank_no: MyString
+  opt_time: MyString
+  opt_summary: MyString
+  id: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  mark: MyString
+  subtract_remain_profit: 9.99
+
+two:
+  name: MyString
+  type: 
+  status: MyString
+  bank_card_no: MyString
+  bank_name: MyString
+  pid: MyString
+  withdraw_profit: 9.99
+  user_id: MyString
+  withdraw_principal: 9.99
+  summary: MyString
+  bank_no: MyString
+  opt_time: MyString
+  opt_summary: MyString
+  id: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  mark: MyString
+  subtract_remain_profit: 9.99

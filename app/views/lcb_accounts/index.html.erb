@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lcb Accounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sign</th>
+      <th>Row num</th>
+      <th>Balance</th>
+      <th>Opt user</th>
+      <th>Dr</th>
+      <th>Certificate</th>
+      <th>Cr decimal</th>
+      <th>Ext</th>
+      <th>Subject code</th>
+      <th>Subject name</th>
+      <th>Subject type</th>
+      <th>Balance sheet</th>
+      <th>Remark</th>
+      <th>User</th>
+      <th>Account type</th>
+      <th>Account no</th>
+      <th>Id</th>
+      <th>Owner</th>
+      <th>Create uid</th>
+      <th>Write uid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lcb_accounts.each do |lcb_account| %>
+      <tr>
+        <td><%= lcb_account.sign %></td>
+        <td><%= lcb_account.row_num %></td>
+        <td><%= lcb_account.balance %></td>
+        <td><%= lcb_account.opt_user_id %></td>
+        <td><%= lcb_account.dr %></td>
+        <td><%= lcb_account.certificate_id %></td>
+        <td><%= lcb_account.cr_decimal %></td>
+        <td><%= lcb_account.ext %></td>
+        <td><%= lcb_account.subject_code %></td>
+        <td><%= lcb_account.subject_name %></td>
+        <td><%= lcb_account.subject_type %></td>
+        <td><%= lcb_account.balance_sheet_id %></td>
+        <td><%= lcb_account.remark %></td>
+        <td><%= lcb_account.user_id %></td>
+        <td><%= lcb_account.account_type %></td>
+        <td><%= lcb_account.account_no %></td>
+        <td><%= lcb_account.id %></td>
+        <td><%= lcb_account.owner_id %></td>
+        <td><%= lcb_account.create_uid %></td>
+        <td><%= lcb_account.write_uid %></td>
+        <td><%= link_to 'Show', lcb_account %></td>
+        <td><%= link_to 'Edit', edit_lcb_account_path(lcb_account) %></td>
+        <td><%= link_to 'Destroy', lcb_account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lcb Account', new_lcb_account_path %>

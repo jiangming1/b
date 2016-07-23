@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Jobs:</strong>
+  <%= @yunwei.jobs %>
+</p>
+
+<p>
+  <strong>Command:</strong>
+  <%=markdown @yunwei.command %>
+  <p>
+  <strong>执行结果:</strong>
+    <pre>  <%=@cmd%></pre>
+</p>
+
+<%= link_to 'Back', yunweis_path %>

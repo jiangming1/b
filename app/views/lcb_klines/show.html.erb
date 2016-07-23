@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @lcb_kline.type %>
+</p>
+
+<p>
+  <strong>Open price:</strong>
+  <%= @lcb_kline.open_price %>
+</p>
+
+<p>
+  <strong>Height price:</strong>
+  <%= @lcb_kline.height_price %>
+</p>
+
+<p>
+  <strong>Low price:</strong>
+  <%= @lcb_kline.low_price %>
+</p>
+
+<p>
+  <strong>Closed price:</strong>
+  <%= @lcb_kline.closed_price %>
+</p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @lcb_kline.id %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @lcb_kline.owner_id %>
+</p>
+
+<p>
+  <strong>Create uid:</strong>
+  <%= @lcb_kline.create_uid %>
+</p>
+
+<p>
+  <strong>Write uid:</strong>
+  <%= @lcb_kline.write_uid %>
+</p>
+
+<%= link_to 'Edit', edit_lcb_kline_path(@lcb_kline) %> |
+<%= link_to 'Back', lcb_klines_path %>

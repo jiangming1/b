@@ -1,0 +1,2 @@
+class LcbWithdraw < ApplicationRecord
+end

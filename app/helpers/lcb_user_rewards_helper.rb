@@ -1,0 +1,2 @@
+module LcbUserRewardsHelper
+end

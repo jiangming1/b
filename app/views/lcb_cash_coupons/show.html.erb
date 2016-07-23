@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lcb_cash_coupon.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @lcb_cash_coupon.user_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @lcb_cash_coupon.amount %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @lcb_cash_coupon.summary %>
+</p>
+
+<p>
+  <strong>Begin time:</strong>
+  <%= @lcb_cash_coupon.begin_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @lcb_cash_coupon.end_time %>
+</p>
+
+<p>
+  <strong>Conditions:</strong>
+  <%= @lcb_cash_coupon.conditions %>
+</p>
+
+<p>
+  <strong>Used amount:</strong>
+  <%= @lcb_cash_coupon.used_amount %>
+</p>
+
+<p>
+  <strong>Financing target bid:</strong>
+  <%= @lcb_cash_coupon.financing_target_bid_id %>
+</p>
+
+<p>
+  <strong>Def:</strong>
+  <%= @lcb_cash_coupon.def_id %>
+</p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @lcb_cash_coupon.id %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @lcb_cash_coupon.owner_id %>
+</p>
+
+<p>
+  <strong>Create uid:</strong>
+  <%= @lcb_cash_coupon.create_uid %>
+</p>
+
+<p>
+  <strong>Write uid:</strong>
+  <%= @lcb_cash_coupon.write_uid %>
+</p>
+
+<%= link_to 'Edit', edit_lcb_cash_coupon_path(@lcb_cash_coupon) %> |
+<%= link_to 'Back', lcb_cash_coupons_path %>

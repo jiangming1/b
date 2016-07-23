@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_type: MyString
+  action_id: MyString
+  role_id: MyString
+  menu_id: MyString
+  id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  owner_id: MyString
+
+two:
+  item_type: MyString
+  action_id: MyString
+  role_id: MyString
+  menu_id: MyString
+  id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  owner_id: MyString

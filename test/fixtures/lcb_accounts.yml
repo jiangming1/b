@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sign: MyString
+  row_num: 1
+  balance: 9.99
+  opt_user_id: MyString
+  dr: 9.99
+  certificate_id: MyString
+  cr_decimal: MyString
+  ext: MyString
+  subject_code: MyString
+  subject_name: MyString
+  subject_type: MyString
+  balance_sheet_id: MyString
+  remark: MyString
+  user_id: MyString
+  account_type: MyString
+  account_no: MyString
+  id: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+
+two:
+  sign: MyString
+  row_num: 1
+  balance: 9.99
+  opt_user_id: MyString
+  dr: 9.99
+  certificate_id: MyString
+  cr_decimal: MyString
+  ext: MyString
+  subject_code: MyString
+  subject_name: MyString
+  subject_type: MyString
+  balance_sheet_id: MyString
+  remark: MyString
+  user_id: MyString
+  account_type: MyString
+  account_no: MyString
+  id: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString

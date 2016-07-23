@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: MyString
+  code: MyString
+  period: 1
+  annualized_rates: 9.99
+  collect_amount: 9.99
+  finish_amount: 9.99
+  limit_amount: MyString
+  begin_date: 2016-05-29 13:33:03
+  end_date: 2016-05-29 13:33:03
+  name: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  id: MyString
+  description: MyText
+  interest_way: MyString
+  min_amount: 9.99
+  bid_count: 1
+  type: 
+  profit_flag: MyString
+  pics: MyString
+  pics_description: MyString
+  cash_mask: MyString
+  draft_info: MyString
+  new_investor: false
+
+two:
+  status: MyString
+  code: MyString
+  period: 1
+  annualized_rates: 9.99
+  collect_amount: 9.99
+  finish_amount: 9.99
+  limit_amount: MyString
+  begin_date: 2016-05-29 13:33:03
+  end_date: 2016-05-29 13:33:03
+  name: MyString
+  owner_id: MyString
+  create_uid: MyString
+  write_uid: MyString
+  id: MyString
+  description: MyText
+  interest_way: MyString
+  min_amount: 9.99
+  bid_count: 1
+  type: 
+  profit_flag: MyString
+  pics: MyString
+  pics_description: MyString
+  cash_mask: MyString
+  draft_info: MyString
+  new_investor: false

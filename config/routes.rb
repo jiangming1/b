@@ -25,17 +25,17 @@ Rails.application.routes.draw do
   resources :lcb_user_banks
   resources :lcb_users
   resources :yunweis
-  namespace :admin do
-    resources :users
-  end
+#  namespace :admin do
+#    resources :users
+#  end
   match '/reg', to: 'lcb_users#new', via: 'get'
   match '/login', to: 'lcb_users#login', via: 'get'
 
   match '/sui_cun_bao', to: 'lcb_users#sui_cun_bao',via:"get"
   match '/login1', to: 'lcb_users#login1', via: 'post'
-    namespace :admin do
-          resources :sessions, only: [:new]
-              match '/signin', to: 'lcb_users#new', via: 'get'
-         end
+#    namespace :admin do
+#          resources :sessions, only: [:new]
+#              match '/signin', to: 'lcb_users#new', via: 'get'
+#         end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

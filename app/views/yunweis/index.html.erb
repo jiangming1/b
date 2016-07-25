@@ -1,29 +1,163 @@
-<p id="notice"><%= notice %></p>
+<script>
+$(function() {
+  TabTool.init();
+  MenuLoader.load();
+  QuickBtnLoader.load();
+  $(window).bind('resize', function() {
+    // alert($("#tabBar").height());
+  });
+});
 
-<h1>Yunweis</h1>
+var QuickBtnLoader = {
+  load : function() {
+    $.get("/static/menu.js", {
+      t : new Date()
+    }, function(data) {
+      if (!data) {
+        return;
+      }
+      for ( var i in data) {
+        var btn = $("<a  ></a>");
+        $("#quickBtnBar").append(btn);
+        btn.linkbutton({
+          iconCls : data[i].icon,
+          plain : true,
+          id : data[i].id,
+          text : data[i].menuName
+        });
+        btn.attr("url", data[i].url);
+        btn.attr("menu_id", data[i].id);
+        btn.attr("target", data[i].target);
+        btn.click(function() {
+          var target = $(this).attr("target");
+          if (!target || target == "main") {
+            TabTool.open(MenuLoader.menuDataCache[$(this).attr("menu_id")]);
+            return;
+          }
+          alert("有代码尚未完成!");
+        });
+      }
+    }, "json");
 
-<table>
-  <thead>
-    <tr>
-      <th>Jobs</th>
-      <th>Command</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  }
+};
+/**
+ * 标签页相关
+ */
+var TabTool = {
+  init : function() {
+    $('#tabBar').tabs({
+      border : false,
+      height : $("#tabBar").height() + "px",
+      onSelect : function(title) {
+        // alert(title + ' is selected');
+      }
+    });
 
-  <tbody>
-    <% @yunweis.each do |yunwei| %>
-      <tr>
-        <td><%= yunwei.jobs %></td>
-        <td><%= yunwei.command %></td>
-        <td><%= link_to 'Show', yunwei %></td>
-        <td><%= link_to 'Edit', edit_yunwei_path(yunwei) %></td>
-        <td><%= link_to 'Destroy', yunwei, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    $("#tabBar").tabs('add', {
+      title : '投资人',
+      content : '<iframe class="mainFrame" src="http://www.baidu.com" frameborder="0"></iframe>',
+      closable : false
+    });
+//    $("#tabBar").tabs('add', {
+//      title : '资产负责表',
+//      content : '<iframe class="mainFrame" src="balance_sheet.jsp" frameborder="0"></iframe>',
+//      closable : false
+//    });
+    
+    $("#tabBar").tabs('add', {
+      title : '融资标的',
+      content : '<iframe class="mainFrame" src="financing_target/financing_target_manager.jsp" frameborder="0"></iframe>',
+      closable : false
+    });
+    
+  },
+  open : function(pageInfo) {
+    $("#tabBar").tabs('add', {
+      title : pageInfo.menuName,
+      content : '<iframe class="mainFrame" src="' + pageInfo.url + '" frameborder="0"></iframe>',
+      closable : true
+    });
+  }
+};
 
-<br>
+/**
+ * 菜单相关
+ */
+var MenuLoader = {
+  menuDataCache : {},
+  add2Cache : function(itemData) {
+    MenuLoader.menuDataCache[itemData.id] = {
+      url : itemData.url,
+      target : itemData.target,
+      hasChild : itemData.childs.length > 0,
+      menuName : itemData.menuName
+    };
+  },
+  load : function() {
+    $.get("/static/menu.js", {
+      t : new Date()
+    }, function(data) {
+      if (!data) {
+        return;
+      }
+      for ( var i in data) {
+        MenuLoader.makeMenuButton(data[i]);
+      }
+    }, "json");
+  },
+  makeMenuButton : function(itemData) {
+    MenuLoader.add2Cache(itemData);
+    var menuBtn = $("<div></div>");
+    $("#menuBar").append(menuBtn);
+    menuBtn.menubutton({
+      iconCls : itemData.icon,
+      text : itemData.menuName
+    });
+    if (itemData.childs.length > 0) {
+      var menuContainer = $("<div></div>");
+      MenuLoader.makeMenu(itemData.childs, menuContainer);
+      menuContainer.menu({
+        onClick : function(item) {
+          var menuInfo = MenuLoader.menuDataCache[item.id];
+          if (menuInfo.hasChild) {
+            return;
+          }
+          if (!menuInfo.target || menuInfo.target == "main") {
+            TabTool.open(menuInfo);
+          } else if (menuInfo.target == "self") {
+            window.location = menuInfo.url;
+          } else if (menuInfo.target == "_blank") {
 
-<%= link_to 'New Yunwei', new_yunwei_path %>
+          }
+        }
+      });
+      menuBtn.menubutton({
+        menu : menuContainer
+      });
+    }
+
+  },
+  makeMenu : function(itemDataList, container) {
+    for ( var i in itemDataList) {
+      var itemData = itemDataList[i];
+      MenuLoader.add2Cache(itemData);
+      var menu = $("<div ></div>");
+      menu.html(itemData.menuName);
+      if (itemData.icon) {
+        menu.attr("iconCls", itemData.icon);
+      }
+      menu.attr("id", itemData.id);
+      // menu.attr("disabled", true);
+      container.append(menu);
+      if (itemData.childs.length > 0) {
+        var menuContainer = $("<div></div>");
+        menu.append(menuContainer);
+        MenuLoader.makeMenu(itemData.childs, menuContainer);
+        // alert(itemData.childs);
+      }
+    }
+    // alert(JSON.stringify(itemData));
+  }
+};
+</script>

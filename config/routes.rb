@@ -30,7 +30,7 @@ Rails.application.routes.draw do
 #  end
   match '/reg', to: 'lcb_users#new', via: 'get'
   match '/login', to: 'lcb_users#login', via: 'get'
-
+  match 'about_us.htm', to:'lcb_users#about_us.htm',via:'get'
   match '/sui_cun_bao', to: 'lcb_users#sui_cun_bao',via:"get"
   match '/login1', to: 'lcb_users#login1', via: 'post'
 #    namespace :admin do

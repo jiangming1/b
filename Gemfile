@@ -1,8 +1,9 @@
-source 'https://rubygems.org'
+source 'https://gems.ruby-china.org'
 gem 'redcarpet'
 gem 'coderay'
+gem 'json', '>= 1.8'
 gem 'remotipart', github: 'mshibuya/remotipart'
-gem 'rails_admin', '>= 1.0.0.rc'
+#gem 'rails_admin', '>= 1.0.0.rc'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '>= 5.0.0.rc1', '< 5.1'
 # Use sqlite3 as the database for Active Record

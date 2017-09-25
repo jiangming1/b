@@ -1,11 +1,11 @@
 GIT
   remote: git://github.com/mshibuya/remotipart.git
-  revision: 88d9a7d55bde66acb6cf3a3c6036a5a1fc991d5e
+  revision: cd653ddc43bb09767b8f2802d6e27b3e00ef992f
   specs:
-    remotipart (1.2.1)
+    remotipart (1.3.1)
 
 GEM
-  remote: https://rubygems.org/
+  remote: https://gems.ruby-china.org/
   specs:
     actioncable (5.0.0.rc1)
       actionpack (= 5.0.0.rc1)
@@ -196,6 +196,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  json (>= 1.8)
   listen (~> 3.0.5)
   puma (~> 3.0)
   rails (>= 5.0.0.rc1, < 5.1)
@@ -211,4 +212,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.12.3
+   1.15.4
